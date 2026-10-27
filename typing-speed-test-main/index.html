@@ -1,57 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Typing Speed Test</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- displays site properly based on user's device -->
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./assets/images/favicon-32x32.png"
+        >
+        <link rel="stylesheet" href="./style.css">
+        <title>Frontend Mentor | Typing Speed Test</title>
+        <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+        <style>
     .attribution { font-size: 0.6875rem; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-
-  Personal best: <!-- PB --> WPM
-
-  WPM: <!-- WPM -->
-  Accuracy: <!-- Accuracy -->
-  Time: <!-- Time -->
-
-  Difficulty:
-  Easy
-  Medium
-  Hard
-
-  Mode:
-  Timed (60s)
-  Passage
-
-  <!-- Passage -->
-
-  Start Typing Test
-  Or click the text and start typing
-
-  <!-- Test Complete Start -->
-
-  Test Complete!
-  Solid run. Keep pushing to beat your high score.
-
-  WPM: <!-- WPM -->
-  Accuracy: <!-- Accuracy -->
-  Characters: <!-- Correct/Incorrect -->
-
-  Go Again
-  
-  <!-- Test Complete End -->
-
-  <footer class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </footer>
-</body>
+        </style>
+    </head>
+    <body>
+        <nav>
+            <img class="logo" src="./assets/images/logo-large.svg" alt="the logo">
+            <div class="personal-best">
+                <img src="./assets/images/icon-personal-best.svg" alt="a trophy">
+                <p>
+                    Personal best:
+                    <span id="allTimeBest">WPM</span>
+                </p>
+            </div>
+        </nav>
+        <div class="details">
+            <div class="left-detail">
+                <div>
+                    <span class="details-heading">WPM:</span>
+                    <span id="WPM">0</span>
+                </div>
+                <div>
+                    <span class="details-heading">Accuracy:</span>
+                    <span id="accuracy">100%</span>
+                </div>
+                <div>
+                    <span class="details-heading">Time:</span>
+                    <span id="time">0:60</span>
+                </div>
+            </div>
+            <div class="right-detail">
+                <div class="right-detail-btn1-section">
+                    <span class="rightDetails-heading">Difficulty:</span>
+                    <button type="button" id="easy">Easy</button>
+                    <button type="button" id="medium">Medium</button>
+                    <button type="button" id="hard">Hard</button>
+                </div>
+                <div class="right-detail-btn2-section">
+                    <span class="rightDetails-heading">Mode:</span>
+                    <button type="button" id="timed">Timed(60s)</button>
+                    <button type="button" id="passage">Passage</button>
+                </div>
+            </div>
+        </div>
+        <div class="passage-area">
+            <div class="content" id="ctn"></div>
+            <div class="start-overlay">
+                <button type="button" id = "str">Start Typing Test</button>
+                <p>Or click the text and start typing</p>
+            </div>
+        </div>
+        <div id="researt" class="restart">
+            <p>Restart Test</p>
+            <img id="rst" src="./assets/images/icon-restart.svg" alt="">
+        </div>
+        <script src="./app.js" defer></script>
+        <!-- <footer class="attribution">
+            Challenge by
+            <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>
+            . 
+    Coded by
+            <a href="#">Your Name Here</a>
+            .
+        </footer> -->
+    </body>
 </html>
